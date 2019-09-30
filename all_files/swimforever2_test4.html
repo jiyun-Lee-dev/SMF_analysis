@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>SwimForever</title>
+  <link rel="stylesheet" TYPE="text/css" href="swimforever2_test.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="swimforever2_test4.js"></script>
+</head>
+
+<body>
+  <div id="EntireWrap">
+
+    <div id="HeaderWrap">
+      <div id="siteTitleWrap">
+        <a class="menuLink" href="swimforever2_test.html"><img src="SwimForeverTitle.png" title="첫 화면으로 돌아가기" id="siteTitleIMGPos"></a>
+      </div>
+      <nav id="MenuNav">
+        <ul>
+          <li><a class="menuLink" href="swimforever2_test.html">기록 검색</a></li>
+          <li><a class="menuLink" href="swimforever2_test3.html">기록 예측</a></li>
+          <li><a class="menuLink" href="swimforever2_test4.html">기록 분석</a></li>
+          <li><a class="menuLink" href="http://45.119.147.152:8080/test3_upload/ResultForm.jsp">대회 결과 업로드</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="ContentWrap">
+      <div id="SearchConditionWrap">
+        <div id="analysis_background" class="analysis_background">
+          <form class="analysis_Form">
+            <div class="search-event" style="height: 60%;">
+              <span style="color: white; font-weight: 600; font-size: 18pt; text-align: center; display: table; margin-right: auto; margin-left: auto;">다음 조건을 모두 입력하시고<br>원하시는 선수의 기록을 분석해보세요!</span>
+              <div class="analysis_Table">
+                <div class="analysis_tableRow">
+                  <fieldset class="playerName">
+                    <div class="optionTitle">
+                      <legend>이름</legend>
+                    </div>
+                    <div class="optionPanel">
+                      <span class="name inputOption">
+                        <input type="text" id="name_analysis" placeholder="선수 이름">
+                      </span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="analysis_tableRow">
+                  <fieldset class="playerSex">
+                    <div class="optionTitle">
+                      <legend>성별</legend>
+                    </div>
+                    <div class="optionPanel" id="sex">
+                      <span class="sex option">
+                        <input type="radio" id="women-analysis" class="sex_analysis" value="여">
+                        <label for="women-analysis">여자</label>
+                      </span>
+                      <span class="sex option">
+                        <input type="checkbox" id="men-analysis" class="sex_analysis" value="남">
+                        <label for="men-analysis">남자</label>
+                      </span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="analysis_tableRow">
+                  <fieldset class="age">
+                    <div class="optionTitle">
+                      <legend>나이</legend>
+                    </div>
+                    <div class="optionPanel" id="age">
+                      <span class="age option">
+                        <input type="checkbox" id="0~19" class="age_analysis" value="0,19">
+                        <label for="0~19">0~19</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="20~24" class="age_analysis" value="20,24">
+                        <label for="20~24">20~24</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="25~29" class="age_analysis" value="25,29">
+                        <label for="25~29">25~29</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="30~34" class="age_analysis" value="30,34">
+                        <label for="30~34">30~34</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="35~39" class="age_analysis" value="35,39">
+                        <label for="35~39">35~39</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="40~44" class="age_analysis" value="40,44">
+                        <label for="40~44">40~44</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="45~49" class="age_analysis" value="45,49">
+                        <label for="45~49">45~49</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="50~54" class="age_analysis" value="50,54">
+                        <label for="50~54">50~54</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="55~59" class="age_analysis" value="55,59">
+                        <label for="55~59">55~59</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="60~64" class="age_analysis" value="60,64">
+                        <label for="60~64">60~64</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="65~69" class="age_analysis" value="65,69">
+                        <label for="65~69">65~69</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="70~74" class="age_analysis" value="70,74">
+                        <label for="70~74">70~74</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="75~79" class="age_analysis" value="75,79">
+                        <label for="75~79">75~79</label>
+                      </span>
+                      <span class="age option">
+                        <input type="checkbox" id="80~110" class="age_analysis" value="80,110">
+                        <label for="80~110">80~</label>
+                      </span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="analysis_tableRow">
+                  <fieldset class="teamName">
+                    <div class="optionTitle">
+                      <legend>소속</legend>
+                    </div>
+                    <div class="optionPanel">
+                      <span class="teamName selectOption">
+                        <input type="text" name="selValue" class="selValue teamName" placeholder="직접입력" />
+                        <select id="teamName" onChange="setselectedValue(this.value, this.id)">
+                          <option onselect="focus">직접입력</option>
+                          <option value="개인">개인</option>
+                          <option value="DC">DC</option>
+                          <option value="HYSC">HYSC</option>
+                          <option value="IMS">IMS</option>
+                          <option value="IMS_x_Hyndai">IMS x Hyndai</option>
+                          <option value="MC미친수영">MC미친수영</option>
+                          <option value="NPS">NPS</option>
+                          <option value="PRRCTRI">PRRCTRI</option>
+                          <option value="RED14.9">RED14.9</option>
+                          <option value="S-LIFE">S-LIFE</option>
+                          <option value="SD-7">SD-7</option>
+                          <option value="TISC">TISC</option>
+                          <option value="Team_101">Team 101</option>
+                          <option value="Team_H">Team H</option>
+                          <option value="UP_stream">UP stream</option>
+                          <option value="WONDERWALL">WONDERWALL</option>
+                          <option value="강남구">강남구</option>
+                          <option value="강북구">강북구</option>
+                          <option value="강서구">강서구</option>
+                          <option value="관악구">관악구</option>
+                          <option value="관악수영">관악수영</option>
+                          <option value="관악청소년회관">관악청소년회관</option>
+                          <option value="그랑블루">그랑블루</option>
+                          <option value="그랑블루수영동호회">그랑블루수영동호회</option>
+                          <option value="낭만크루">낭만크루</option>
+                          <option value="노원구">노원구</option>
+                          <option value="덕수수영">덕수수영</option>
+                          <option value="동대문구">동대문구</option>
+                          <option value="동작구">동작구</option>
+                          <option value="무대뽀">무대뽀</option>
+                          <option value="문화체육관">문화체육관</option>
+                          <option value="물개나라">물개나라</option>
+                          <option value="삼각산수영동호회">삼각산수영동호회</option>
+                          <option value="삼척마스터즈클럽">삼척마스터즈클럽</option>
+                          <option value="서대문구">서대문구</option>
+                          <option value="서대문문화체육">서대문문화체육</option>
+                          <option value="서울메트로수영사랑회">서울메트로수영사랑회</option>
+                          <option value="서초구">서초구</option>
+                          <option value="성동구">성동구</option>
+                          <option value="성동구수영연합회">성동구수영연합회</option>
+                          <option value="소녀어깨">소녀어깨</option>
+                          <option value="소사국민체육센터">소사국민체육센터</option>
+                          <option value="수미사">수미사</option>
+                          <option value="수영사랑">수영사랑</option>
+                          <option value="수영인">수영인</option>
+                          <option value="수영짱클럽">수영짱클럽</option>
+                          <option value="수원월드컵">수원월드컵</option>
+                          <option value="스윔랄프">스윔랄프</option>
+                          <option value="스윔온">스윔온</option>
+                          <option value="스윔플림">스윔플림</option>
+                          <option value="스프린터">스프린터</option>
+                          <option value="신동교육문화회관">신동교육문화회관</option>
+                          <option value="신림새벽">신림새벽</option>
+                          <option value="신림특수임무대">신림특수임무대</option>
+                          <option value="신조">신조</option>
+                          <option value="싸이클론">싸이클론</option>
+                          <option value="쌍용자동차">쌍용자동차</option>
+                          <option value="애슬">애슬</option>
+                          <option value="엄지척">엄지척</option>
+                          <option value="영등포구">영등포구</option>
+                          <option value="영일레븐">영일레븐</option>
+                          <option value="오리물방개">오리물방개</option>
+                          <option value="온니수">온니수</option>
+                          <option value="유어짐">유어짐</option>
+                          <option value="인스윔">인스윔</option>
+                          <option value="재미삼아">재미삼아</option>
+                          <option value="저스트원">저스트원</option>
+                          <option value="중랑구">중랑구</option>
+                          <option value="중랑구민체육센터">중랑구민체육센터</option>
+                          <option value="지느러미">지느러미</option>
+                          <option value="청어람">청어람</option>
+                          <option value="청어람V">청어람V</option>
+                          <option value="코오롱서초">코오롱서초</option>
+                          <option value="팀코">팀코</option>
+                          <option value="한화케미칼">한화케미칼</option>
+                          <option value="헤엄이">헤엄이</option>
+                          <option value="현대제철문화센터">현대제철문화센터</option>
+                          <option value="화계수영동호회">화계수영동호회</option>
+                          <option value="휘몰이">휘몰이</option>
+                        </select>
+                      </span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="buttonBlock">
+                  <input type="button" id="analysis_Button" value="분석하러 가기 →">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
